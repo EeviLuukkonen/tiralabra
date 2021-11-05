@@ -6,7 +6,7 @@ Olisi hyvä, jos kurssimateriaaleissa olisi lisää esimerkkiprojekteja eri kiel
 
 Päädyin valitsemaan polunetsintään liittyvän projektin, sillä muistan tykänneeni labyrinttitehtävistä TIRA-kurssilla.
 Käyttöliittymään annetaan kurssilla vapaat kädet, mutta kokemuksen puutteen vuoksi tämä lähinnä hankaloittaa tekemistä. 
-Päädyin kuitenkin oletettavasti simppelimpään vaihtoehtoon eli tekstipohjaiseen käyttöliittymään.
+Päädyin kuitenkin oletettavasti yksinkertaisimpaan vaihtoehtoon eli tekstipohjaiseen käyttöliittymään.
 
 Projektin aloitus on tuntunut vaikealta. Minulle on vielä epäselvää, mistä aloittaa työstäminen ensi viikolla. Kuinka labyrintin luomisen käytännössä toteuttaa?
 
