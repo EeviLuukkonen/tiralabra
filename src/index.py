@@ -7,6 +7,7 @@ def main():
     # luo labyrintti
     labyrintti = Labyrintti(korkeus, leveys)
     labyrintti.luo()
+    labyrintti.tulosta()
     start = input("Labyrintti luotu. Paina S ratkaistaksesi labyrintin, niin saat tietoja algoritmien tehokkuudesta.")
     print("Lyhyimmän polun pituus on ")
 

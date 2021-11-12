@@ -6,14 +6,13 @@ class Labyrintti():
         self.leveys = leveys
         self.suuntax = [0, 1, 0, -1]
         self.suuntay = [-1, 0, 1, 0]
+        self.labyrintti = []
 
     def luo(self):
-        self.labyrintti = []
         for i in range(self.korkeus):
             self.labyrintti.append([])
             for _ in range(self.leveys):
                 self.labyrintti[i].append("#")
-        self.tulosta()
         
     def DFS(self, x, y):
         self.labyrintti[y][x] = "."
