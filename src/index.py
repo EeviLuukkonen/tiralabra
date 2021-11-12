@@ -8,10 +8,9 @@ def main():
     labyrintti = Labyrintti(korkeus, leveys)
     labyrintti.luo()
     labyrintti.tulosta()
-    start = input("Labyrintti luotu. Paina S ratkaistaksesi labyrintin, niin saat tietoja algoritmien tehokkuudesta.")
+    start = input("Labyrintti luotu. Valitse labyrintin alkupiste muodossa (x,y):")
     print("Lyhyimmän polun pituus on ")
-
-
 
 if __name__ == "__main__":
     main()
+    

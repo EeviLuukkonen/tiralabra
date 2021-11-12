@@ -1,7 +1,22 @@
 import random
 
 class Labyrintti():
+    """Luokka, joka generoi ratkaistavan labyrintin randomized DFS:lla
+       käyttäjän syöttämän koon perustella.
+
+    attributes:
+    korkeus: labyrintin korkeus
+    leveys: labyrintin leveys
+    suuntax: syvyyshakua varten x-koordinaatin suunnat ylös, alas, oikealle ja vasemmalle
+    suuntay: syvyyshakua varten y-koordinaatin suunnat ylös, alas, oikealle ja vasemmalle
+    """
     def __init__(self, korkeus, leveys):
+        """Luokan konstruktori
+
+        Args:
+            korkeus: labyrintin korkeus
+            leveys: labyrintin leveys
+        """
         self.korkeus = korkeus
         self.leveys = leveys
         self.suuntax = [0, 1, 0, -1]
@@ -9,12 +24,23 @@ class Labyrintti():
         self.labyrintti = []
 
     def luo(self):
+        """Metodi, joka luo labyrinttiä kuvaavan verkon/matriisin, joka on pelkkää seinää
+        """
         for i in range(self.korkeus):
             self.labyrintti.append([])
             for _ in range(self.leveys):
                 self.labyrintti[i].append("#")
         
     def DFS(self, x, y):
+        """Metodi, jossa toteutetaan labyrintin luominen satunnaistetulla syvyyshaulla
+
+        Args:
+            x: Lähtökoordinaatti
+            y: Lähtökoordinaatti
+
+        Returns:
+            ratkaisuvalmis labyrintti matriisin muodossa
+        """
         self.labyrintti[y][x] = "."
         while True:
             naapurilista = []
@@ -33,14 +59,16 @@ class Labyrintti():
                         if ctr == 1:
                             naapurilista.append(i)
             if len(naapurilista) > 0:
-                ir = naapurilista[random.randint(0, len(naapurilista)-1)]
-                x += self.suuntax[ir]
-                y += self.suuntay[ir]
+                arvottu_naapuri = naapurilista[random.randint(0, len(naapurilista)-1)]
+                x += self.suuntax[arvottu_naapuri]
+                y += self.suuntay[arvottu_naapuri]
                 self.DFS(x, y)
             else: break
         return self.labyrintti
 
     def tulosta(self):
+        """Metodi, joka tulostaa valmiin labyrintin selkeässä muodossa
+        """
         lab = self.DFS(0,0)
         for i in lab:
             print("".join(i))
