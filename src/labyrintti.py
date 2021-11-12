@@ -45,16 +45,16 @@ class Labyrintti():
         while True:
             naapurilista = []
             for i in range(4):
-                nx = x + self.suuntax[i]
-                ny = y + self.suuntay[i]
-                if nx >= 0 and nx < self.leveys and ny >= 0 and ny < self.korkeus:
-                    if self.labyrintti[ny][nx] == "#":
+                uusix = x + self.suuntax[i]
+                uusiy = y + self.suuntay[i]
+                if uusix >= 0 and uusix < self.leveys and uusiy >= 0 and uusiy < self.korkeus:
+                    if self.labyrintti[uusiy][uusix] == "#":
                         ctr = 0
                         for j in range(4):
-                            ex = nx + self.suuntax[j]
-                            ey = ny + self.suuntay[j]
-                            if ex >= 0 and ex < self.leveys and ey >= 0 and ey < self.korkeus:
-                                if self.labyrintti[ey][ex] == ".":
+                            newx = uusix + self.suuntax[j]
+                            newy = uusiy + self.suuntay[j]
+                            if newx >= 0 and newx < self.leveys and newy >= 0 and newy < self.korkeus:
+                                if self.labyrintti[newy][newx] == ".":
                                     ctr += 1
                         if ctr == 1:
                             naapurilista.append(i)
