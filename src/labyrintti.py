@@ -1,7 +1,7 @@
 import random
 
 class Labyrintti():
-    """Luokka, joka generoi ratkaistavan labyrintin randomized DFS:lla
+    """Luokka, joka generoi ratkaistavan labyrintin randomized dfs:lla
        käyttäjän syöttämän koon perustella.
 
     attributes:
@@ -31,8 +31,8 @@ class Labyrintti():
             for _ in range(self.leveys):
                 self.labyrintti[i].append("#")
         
-    def DFS(self, x, y):
-        """Metodi, jossa toteutetaan labyrintin luominen satunnaistetulla syvyyshaulla
+    def dfs(self, x, y):
+        """Metodi, jossa toteutetaan labyrintin luominen rekursiivisesti satunnaistetulla syvyyshaulla
 
         Args:
             x: Lähtökoordinaatti
@@ -62,14 +62,26 @@ class Labyrintti():
                 arvottu_naapuri = naapurilista[random.randint(0, len(naapurilista)-1)]
                 x += self.suuntax[arvottu_naapuri]
                 y += self.suuntay[arvottu_naapuri]
-                self.DFS(x, y)
+                self.dfs(x, y)
             else: break
         return self.labyrintti
 
     def tulosta(self):
         """Metodi, joka tulostaa valmiin labyrintin selkeässä muodossa
         """
-        lab = self.DFS(0,0)
+        lab = self.dfs(0,0)
         for i in lab:
             print("".join(i))
+
+    def alku_ja_loppu(self, koordinaattilista): # ["10","0"]
+        if not len(koordinaattilista) == 2:
+            raise ValueError
+        if not int(koordinaattilista[0]) <= self.leveys-1:
+            raise ValueError
+        if not int(koordinaattilista[1]) <= self.korkeus-1:
+            raise ValueError
+        if not self.labyrintti[int(koordinaattilista[1])][int(koordinaattilista[0])] == ".":
+            raise ValueError
+
+        return (int(koordinaattilista[1]), int(koordinaattilista[0]))
 
