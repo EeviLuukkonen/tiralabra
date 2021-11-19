@@ -45,16 +45,16 @@ class Labyrintti():
         while True:
             naapurilista = []
             for i in range(4):
-                uusix = x + self.suuntax[i]
-                uusiy = y + self.suuntay[i]
-                if uusix >= 0 and uusix < self.leveys and uusiy >= 0 and uusiy < self.korkeus:
-                    if self.labyrintti[uusiy][uusix] == "#":
+                naapurix = x + self.suuntax[i]
+                naapuriy = y + self.suuntay[i]
+                if naapurix >= 0 and naapurix < self.leveys and naapuriy >= 0 and naapuriy < self.korkeus:
+                    if self.labyrintti[naapuriy][naapurix] == "#":
                         ctr = 0
                         for j in range(4):
-                            newx = uusix + self.suuntax[j]
-                            newy = uusiy + self.suuntay[j]
-                            if newx >= 0 and newx < self.leveys and newy >= 0 and newy < self.korkeus:
-                                if self.labyrintti[newy][newx] == ".":
+                            uusix = naapurix + self.suuntax[j]
+                            uusiy = naapuriy + self.suuntay[j]
+                            if uusix >= 0 and uusix < self.leveys and uusiy >= 0 and uusiy < self.korkeus:
+                                if self.labyrintti[uusiy][uusix] == ".":
                                     ctr += 1
                         if ctr == 1:
                             naapurilista.append(i)
@@ -70,8 +70,10 @@ class Labyrintti():
         """Metodi, joka tulostaa valmiin labyrintin selkeässä muodossa
         """
         lab = self.dfs(0,0)
+        print(lab)
         for i in lab:
             print("".join(i))
+        return lab
 
     def alku_ja_loppu(self, koordinaattilista): # ["10","0"]
         if not len(koordinaattilista) == 2:
