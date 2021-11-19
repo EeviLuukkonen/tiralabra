@@ -30,9 +30,10 @@ class Labyrintti():
             self.labyrintti.append([])
             for _ in range(self.leveys):
                 self.labyrintti[i].append("#")
-        
+
     def dfs(self, x, y):
-        """Metodi, jossa toteutetaan labyrintin luominen rekursiivisesti satunnaistetulla syvyyshaulla
+        """Metodi, jossa toteutetaan labyrintin luominen \
+            rekursiivisesti satunnaistetulla syvyyshaulla
 
         Args:
             x: Lähtökoordinaatti
@@ -47,13 +48,15 @@ class Labyrintti():
             for i in range(4):
                 naapurix = x + self.suuntax[i]
                 naapuriy = y + self.suuntay[i]
-                if naapurix >= 0 and naapurix < self.leveys and naapuriy >= 0 and naapuriy < self.korkeus:
+                if naapurix >= 0 and naapurix < self.leveys and \
+                     naapuriy >= 0 and naapuriy < self.korkeus:
                     if self.labyrintti[naapuriy][naapurix] == "#":
                         ctr = 0
                         for j in range(4):
                             uusix = naapurix + self.suuntax[j]
                             uusiy = naapuriy + self.suuntay[j]
-                            if uusix >= 0 and uusix < self.leveys and uusiy >= 0 and uusiy < self.korkeus:
+                            if uusix >= 0 and uusix < self.leveys and \
+                            uusiy >= 0 and uusiy < self.korkeus:
                                 if self.labyrintti[uusiy][uusix] == ".":
                                     ctr += 1
                         if ctr == 1:
@@ -86,4 +89,3 @@ class Labyrintti():
             raise ValueError
 
         return (int(koordinaattilista[1]), int(koordinaattilista[0]))
-

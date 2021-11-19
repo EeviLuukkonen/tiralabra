@@ -15,4 +15,3 @@ class TestLabyrintti(unittest.TestCase):
         self.lab.tulosta()
 
         self.assertEqual(self.lab.labyrintti[0][0], ".")
-        
