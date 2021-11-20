@@ -8,9 +8,8 @@ def main():
     labyrintti.luo()
     lab_matriisina = labyrintti.tulosta()
     alku, loppu = valinta(labyrintti)
-    print(alku, loppu)
     tulos = BFS(lab_matriisina, korkeus, leveys, alku, loppu)
-    tulos = tulos.haku()
+    tulos = tulos.syvyyshaku()
     print(f"Lyhyimmän polun pituus on {tulos}")
 
 if __name__ == "__main__":

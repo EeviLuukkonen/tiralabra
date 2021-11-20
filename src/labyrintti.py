@@ -71,14 +71,29 @@ class Labyrintti():
 
     def tulosta(self):
         """Metodi, joka tulostaa valmiin labyrintin selkeässä muodossa
+
+        Returns: ratkaisuvalmis labyrintti matriisin muodossa
         """
         lab = self.dfs(0,0)
-        print(lab)
         for i in lab:
             print("".join(i))
         return lab
 
     def alku_ja_loppu(self, koordinaattilista): # ["10","0"]
+        """Metodi, joka testaa onko käyttäjän syöttämät koordinaatit kelvollisia
+
+        Args:
+            koordinaattilista: käyttäjän syöttämät koordinaatit listana
+
+        Raises:
+            ValueError: jos syötteessä on liikaa lukuja
+            ValueError: jos x-koordinaatti on isompi kuin labyrintin leveys
+            ValueError: jos y-koordinaatti on isompi kuin labyrintin korkeus
+            ValueError: jos koordinaatin osoittama kohta on seinää
+
+        Returns:
+            kelvollinen koordinaatti tuplena
+        """
         if not len(koordinaattilista) == 2:
             raise ValueError
         if not int(koordinaattilista[0]) <= self.leveys-1:

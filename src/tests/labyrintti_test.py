@@ -12,6 +12,53 @@ class TestLabyrintti(unittest.TestCase):
 
     def test_tulostus_ok(self):
         self.lab.luo()
-        self.lab.tulosta()
+        a = self.lab.tulosta()
 
-        self.assertEqual(self.lab.labyrintti[0][0], ".")
+        self.assertEqual(a[0][0], ".")
+
+    def test_koordinaatti_ok(self):
+        self.lab.luo()
+        self.lab.dfs(0,0)
+        a = self.lab.alku_ja_loppu(["0","0"])
+
+        self.assertEqual(a, (0,0))
+
+    def test_koordinaatti_liian_pitka(self):
+        self.lab.luo()
+        self.lab.dfs(0,0)
+        try:
+            a = self.lab.alku_ja_loppu(["0","0","0"])
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("ValueError was not raised")
+
+    def test_x_koordinaatti_liian_iso(self):
+        self.lab.luo()
+        self.lab.dfs(0,0)
+        try:
+            self.lab.alku_ja_loppu(["5","5"])
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("ValueError was not raised")
+
+    def test_y_koordinaatti_liian_pitka(self):
+        self.lab.luo()
+        self.lab.dfs(0,0)
+        try:
+            self.lab.alku_ja_loppu(["0","5"])
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("ValueError was not raised")
+
+    def test_koordinaatti_seinaa(self):
+        self.lab.luo()
+        try:
+            self.lab.alku_ja_loppu(["0","0"])
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("ValueError was not raised")
+    
