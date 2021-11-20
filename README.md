@@ -1,4 +1,4 @@
-# Labyrintti
+# Reitti labyrintissa
 
 ![Github Actions](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/workflows/CI/badge.svg)
 [![codecov](https://codecov.io/gh/EeviLuukkonen/tiralabra-polunetsinta/branch/main/graph/badge.svg?token=WJOR82VJRK)](https://codecov.io/gh/EeviLuukkonen/tiralabra-polunetsinta)
