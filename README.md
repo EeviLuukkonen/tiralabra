@@ -12,4 +12,4 @@ Viikkoraportit:
 
 - [Viikkoraportti 1](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/Viikkoraportit/viikko1.md)
 - [Viikkoraportti 2](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/Viikkoraportit/viikko2.md)
-- [Vikkoraportti 3](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/Viikkoraportit/viikko3.md)
+- [Viikkoraportti 3](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/Viikkoraportit/viikko3.md)
