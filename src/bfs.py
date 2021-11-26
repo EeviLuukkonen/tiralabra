@@ -25,7 +25,6 @@ class BFS:
 
 
     def syvyyshaku(self):
-        print(self.labyrintti, self.korkeus, self.leveys, self.alku, self.loppu)
         """Metodi joka toteuttaa syvyyshaun
 
         Returns:
