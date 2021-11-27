@@ -7,27 +7,25 @@ class TestLabyrintti(unittest.TestCase):
 
     def test_luonti_ok(self):
         self.lab.luo()
-        
+
         self.assertEqual(len(self.lab.labyrintti), 4)
 
     def test_tulostus_ok(self):
         self.lab.luo()
-        a = self.lab.tulosta()
 
-        self.assertEqual(a[0][0], ".")
+        self.assertEqual(self.lab.tulosta()[0][0], ".")
 
     def test_koordinaatti_ok(self):
         self.lab.luo()
         self.lab.dfs(0,0)
-        a = self.lab.alku_ja_loppu(["0","0"])
 
-        self.assertEqual(a, (0,0))
+        self.assertEqual(self.lab.alku_ja_loppu(["0","0"]), (0,0))
 
     def test_koordinaatti_liian_pitka(self):
         self.lab.luo()
         self.lab.dfs(0,0)
         try:
-            a = self.lab.alku_ja_loppu(["0","0","0"])
+            self.lab.alku_ja_loppu(["0","0","0"])
         except ValueError:
             pass
         else:

@@ -1,5 +1,5 @@
 
-def ui():
+def aloitus():
     print("Tervetuloa labyrintinratkaisijaan!")
     while True:
         try:
@@ -23,7 +23,8 @@ def valinta(labyrintti):
     print("Labyrintti luotu.")
     while True:
         try:
-            alkusyote = input("Valitse labyrintin alkupiste muodossa x,y (piste 0,0 on vasemmalla ylhäällä): ")
+            alkusyote = input(
+                "Valitse labyrintin alkupiste muodossa x,y (piste 0,0 on vasemmalla ylhäällä): ")
             alku = labyrintti.alku_ja_loppu(alkusyote.split(","))
             break
         except ValueError:

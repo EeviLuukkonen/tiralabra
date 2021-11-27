@@ -32,7 +32,7 @@ class Labyrintti():
                 self.labyrintti[i].append("#")
 
     def dfs(self, x, y):
-        """Metodi, jossa toteutetaan labyrintin luominen \
+        """Metodi, jossa toteutetaan labyrintin luominen
             rekursiivisesti satunnaistetulla syvyyshaulla
 
         Args:
