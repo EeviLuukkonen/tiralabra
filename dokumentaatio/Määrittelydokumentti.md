@@ -1,4 +1,4 @@
-## Määrittelydokumentti
+# Määrittelydokumentti
 
 
 Ohjelmassa etsitään lyhyin reitti labyrintin läpi käyttäen kahta eri algoritmia.
