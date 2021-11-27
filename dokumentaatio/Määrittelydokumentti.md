@@ -2,7 +2,7 @@
 
 
 Ohjelmassa etsitään lyhyin reitti labyrintin läpi käyttäen kahta eri algoritmia.
-Työssä vertaillaan BFS ja Dead end filling -algoritmien tehokkuutta löytää lyhyin mahdollinen polku. Tietorakenteista käytössä ovat ainakin pinorakenne ja verkko.
+Työssä vertaillaan BFS ja Dead end filling -algoritmien tehokkuutta löytää polku labyrintista ulos. Tietorakenteista käytössä ovat ainakin pinorakenne ja verkko.
 
 Ohjelmassa on tekstikäyttöliittymä, jossa labyrintti muodostuu #- ja . -merkeistä (# tarkoittaen seinää ja . merkiten polkua). 
 Ohjelma kysyy käyttäjältä, minkä kokoinen labyrintti generoidaan. Labyrintin alkupiste ja loppupiste kysytään myös käyttäjältä.
