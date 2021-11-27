@@ -1,9 +1,9 @@
 import unittest
-from labyrintti import Labyrintti
+from labyrintin_luonti import LabyrintinLuonti
 
 class TestLabyrintti(unittest.TestCase):
     def setUp(self):
-        self.lab = Labyrintti(4,4)
+        self.lab = LabyrintinLuonti(4,4)
 
     def test_luonti_ok(self):
         self.lab.luo()
