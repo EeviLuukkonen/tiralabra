@@ -2,9 +2,9 @@
 
 ## Yksikkötestaus
 
-![Screenshot from 2021-11-20 16-42-26](https://user-images.githubusercontent.com/75749790/142730467-5c6d2a5f-2ce1-4e7c-90d6-08fdc414036c.png)
+![Screenshot from 2021-11-27 16-40-30](https://user-images.githubusercontent.com/75749790/143687531-7b10bd7e-264a-45d7-a59e-9bdc6838bfda.png)
 
-Yksikkötestaus on toteutettu unittestin avulla. Testattuna ovat luokat `Labyrintti` ja `BFS`. Haarautumakattavuus on näiden luokkien osalta 98%.
+Yksikkötestaus on toteutettu unittestin avulla. Testattuna ovat luokat `Labyrintti`, `LabyrintinLuonti` `DeadEndFilling` ja `BFS`. Haarautumakattavuus on näiden luokkien osalta 99%.
 Testauskattavuudesta on jätetty pois `index.py`, käyttöjärjestelmätiedosto `ui.py` sekä testiluokat.
 
 Yksikkötestauksen haarauskattavuusraportin voi suorittaa komennolla 
