@@ -18,3 +18,13 @@ htmlcov/index.html
 ```
 
 ## Suorituskykytestaus
+
+
+## Koodin laatu
+
+Pylint-arvosanan voi suorittaa komennolla
+```
+poetry run invoke lint
+```
+
+Pylint-score on tällä hetkellä 9.66.
