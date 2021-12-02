@@ -26,7 +26,6 @@ def main():
     loppu = time.time_ns()
     kesto2 = loppu-alku
 
-    print(tulos1, tulos2)
     ui.tulos(tulos2, kesto1, kesto2)
 
 

@@ -15,7 +15,6 @@ class DeadEndFilling:
                 for j in range(self.labyrintti.leveys):
                     if self.onko_dead_end(i, j):
                         change = True
-        print(self.labyrintti.labyrintti)
         return self.polku_labyrinttiin()
 
     def onko_dead_end(self, i, j):
