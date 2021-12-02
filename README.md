@@ -8,7 +8,7 @@ Tietorakenteet ja algoritmit harjoitustyö syksy 2021
 - [Määrittelydokumentti](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/M%C3%A4%C3%A4rittelydokumentti.md)
 - [Testausdokumentti](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/testausdokumentti.md)
 - [Toteutusdokumentti](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/toteutusdokumentti.md)
-- [Käyttöohje](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/tree/main/dokumentaatio)
+- [Käyttöohje](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/kayttoohje.md)
 
 Viikkoraportit:
 
@@ -16,3 +16,5 @@ Viikkoraportit:
 - [Viikkoraportti 2](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/Viikkoraportit/viikko2.md)
 - [Viikkoraportti 3](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/Viikkoraportit/viikko3.md)
 - [Viikkoraportti 4](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/Viikkoraportit/viikko4.md)
+- [Viikkoraportti 5](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/Viikkoraportit/viikko5.md)
+
