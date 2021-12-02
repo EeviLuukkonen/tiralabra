@@ -4,6 +4,7 @@ def aloitus():
     while True:
         try:
             leveys = int(input("Anna labyrintin leveys: "))
+            labyrintin_koon_syote_kelpaa(leveys)
             break
         except ValueError:
             print("Virheellinen syöte.")
@@ -11,6 +12,7 @@ def aloitus():
     while True:
         try:
             korkeus = int(input("Anna labyrintin korkeus: "))
+            labyrintin_koon_syote_kelpaa(korkeus)
             break
         except ValueError:
             print("Virheellinen syöte.")
@@ -18,8 +20,11 @@ def aloitus():
 
     return leveys, korkeus
 
+def labyrintin_koon_syote_kelpaa(koko):
+    if not koko > 0:
+        raise ValueError
 
-def valinta(labyrintti):
+def koordinaattien_valinta(labyrintti):
     print("Labyrintti luotu.")
     while True:
         try:
@@ -40,3 +45,9 @@ def valinta(labyrintti):
             continue
 
     return alku, loppu
+
+def tulos(polun_pituus, kesto1, kesto2):
+    print("\nTULOKSET:")
+    print(f"\nLyhyimmän polun pituus on {polun_pituus}.")
+    print(f"Syvyyshaulla ratkaisun saaminen kesti {kesto1} nanosekuntia.")
+    print(f"Dead-end filling -algoritmilla ratkaisun saaminen kesti {kesto2} nanosekuntia.\n")

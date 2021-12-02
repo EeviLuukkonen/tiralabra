@@ -51,15 +51,7 @@ class LabyrintinLuonti():
                 if naapurix >= 0 and naapurix < self.leveys and \
                      naapuriy >= 0 and naapuriy < self.korkeus:
                     if self.labyrintti[naapuriy][naapurix] == "#":
-                        ctr = 0
-                        for j in range(4):
-                            uusix = naapurix + self.suuntax[j]
-                            uusiy = naapuriy + self.suuntay[j]
-                            if uusix >= 0 and uusix < self.leveys and \
-                            uusiy >= 0 and uusiy < self.korkeus:
-                                if self.labyrintti[uusiy][uusix] == ".":
-                                    ctr += 1
-                        if ctr == 1:
+                        if self.naapuri_apumetodi(naapurix, naapuriy) == 1:
                             naapurilista.append(i)
             if len(naapurilista) > 0:
                 arvottu_naapuri = naapurilista[random.randint(0, len(naapurilista)-1)]
@@ -68,6 +60,17 @@ class LabyrintinLuonti():
                 self.dfs(x, y)
             else: break
         return self.labyrintti
+
+    def naapuri_apumetodi(self, naapurix, naapuriy):
+        ctr = 0
+        for j in range(4):
+            uusix = naapurix + self.suuntax[j]
+            uusiy = naapuriy + self.suuntay[j]
+            if uusix >= 0 and uusix < self.leveys and uusiy >= 0 and uusiy < self.korkeus:
+                if self.labyrintti[uusiy][uusix] == ".":
+                    ctr += 1
+        return ctr
+
 
     def tulosta(self):
         """Metodi, joka tulostaa valmiin labyrintin selkeässä muodossa
