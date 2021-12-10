@@ -16,6 +16,18 @@ Lisäksi ohjelman pääasiallisesta kulusta vastaa tiedosto `index.py`. Testit o
 
 ## Saavutetut aika- ja tilavaativuudet (m.m. O-analyysit pseudokoodista)
 
+Leveyshaku pseudokoodina:
+
+![Screenshot from 2021-12-10 17-25-29](https://user-images.githubusercontent.com/75749790/145598491-0041924f-92bd-4944-8fcd-c916e023d83f.png)
+
+Leveyshaun aikavaativuus on O(n + m), missä n on solmujen määrä ja m kaarien määrä. Se käyttää aputaulukkoa jo vierailluista solmuista, joten sen tilavaativuus on O(n).
+
+Dead-end filling pseudokoodina:
+
+![Screenshot from 2021-12-10 15-52-24](https://user-images.githubusercontent.com/75749790/145598336-322444e7-ec1e-4bdc-9570-60041de1a7e7.png)
+
+Dead-end fillingin aikavaativuus on 2^n. Sen tilavaativuus on O(1), sillä se muuraa syötteenä olevaa labyrinttia eikä tarvitse apumatriisia.
+
 ## Suorituskyky- ja O-analyysivertailu
 
 Syvyyshaku on suorituskyvyltään parempi algoritmi kuin dead-end filling.
@@ -27,3 +39,6 @@ Labyrinttien luomiseen olisin voinut käyttää algoritmia, joka mahdollistaisi 
 Lisäksi ohjelman luomat labyrintit ovat "perfect maze" eli niissä on vain yksi polku. Syvyyshaulla voi löytää lyhyimmän polun labyrintista, joissa reittejä on useita. Dead-end filling taas jättää kaikki mahdolliset polut, joista lyhyin olisi täytynyt etsiä erikseen. Tällaiset labyrintit olisivat joka tapauksessa olleet mielenkiintoinen lisä ohjelmalle.
 
 ## Lähteet
+
+Antti Laaksonen, Tietorakenteet ja algoritmit
+https://iopscience.iop.org/article/10.1088/1742-6596/1569/2/022059/pdf
