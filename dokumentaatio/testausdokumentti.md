@@ -19,11 +19,12 @@ htmlcov/index.html
 
 ## Suorituskykytestaus
 
-Alustavan suorituskykytestauksen mukaan dead-end fillingin aikavaativuus on eksponentiaalinen ja syvyyshaun lineaarinen. Algoritmeja on testattu eri syötteiden koolla (1-65). Pienillä syötteillä nopeuserot ovat melko pieniä, mutta ero kasvaa syötteen kasvaessa.
+Algoritmeja on testattu erikokoisilla n * n syötteillä (1-65). Pienillä syötteillä nopeuserot ovat melko pieniä, mutta ero kasvaa syötteen kasvaessa. Testattavana ovat sekä ratkaisualgoritmit että generoiva algoritmi.
 
-![Screenshot from 2021-12-02 18-07-12](https://user-images.githubusercontent.com/75749790/144458911-8a3860ea-64ce-435a-8696-5bce60aaee8e.png)
-
-![Screenshot from 2021-12-02 18-07-19](https://user-images.githubusercontent.com/75749790/144458888-a6f295a6-5766-440f-a94c-aa969bb07dfe.png)
+![Screenshot from 2021-12-10 17-11-37](https://user-images.githubusercontent.com/75749790/145596958-d3f78f49-cc54-4404-ac32-e61ec32baed8.png)
+![Screenshot from 2021-12-10 17-16-43](https://user-images.githubusercontent.com/75749790/145597187-bd7e63ee-fb69-44fb-87de-9d785f43915a.png)
+![Screenshot from 2021-12-10 17-16-54](https://user-images.githubusercontent.com/75749790/145597199-54155f53-6aac-4a2f-934a-c0e425fe8a8f.png)
+![Screenshot from 2021-12-10 17-17-00](https://user-images.githubusercontent.com/75749790/145597225-78f3398d-6f18-4119-9f49-e9570ee00ce9.png)
 
 ## Koodin laatu
 
