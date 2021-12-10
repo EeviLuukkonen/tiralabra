@@ -17,4 +17,5 @@ Viikkoraportit:
 - [Viikkoraportti 3](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/Viikkoraportit/viikko3.md)
 - [Viikkoraportti 4](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/Viikkoraportit/viikko4.md)
 - [Viikkoraportti 5](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/Viikkoraportit/viikko5.md)
+- [Viikkoraportti 6](https://github.com/EeviLuukkonen/tiralabra-polunetsinta/blob/main/dokumentaatio/Viikkoraportit/viikko6.md)
 
