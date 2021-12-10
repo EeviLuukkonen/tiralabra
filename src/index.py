@@ -9,24 +9,29 @@ def main():
     leveys, korkeus = ui.aloitus()
     luonti = LabyrintinLuonti(korkeus, leveys)
     luonti.luo()
+
+    alkuaika = time.time_ns()
     lab_matriisina = luonti.tulosta()
+    loppuaika = time.time_ns()
+    kesto1 = loppuaika-alkuaika
     alku, loppu = ui.koordinaattien_valinta(luonti)
 
     labyrintti = Labyrintti(lab_matriisina, korkeus, leveys, alku, loppu)
     tulos1 = BFS(labyrintti)
     tulos2 = DeadEndFilling(labyrintti)
 
-    alku = time.time_ns()
-    tulos1 = tulos1.syvyyshaku()
-    loppu = time.time_ns()
-    kesto1 = loppu-alku
+    alkuaika = time.time_ns()
+    tulos1 = tulos1.leveyshaku()
+    loppuaika = time.time_ns()
+    kesto2 = loppuaika-alkuaika
 
-    alku = time.time_ns()
-    tulos2 = tulos2.dead_end_filling()
-    loppu = time.time_ns()
-    kesto2 = loppu-alku
+    alkuaika = time.time_ns()
+    tulos2.dead_end_filling()
+    loppuaika = time.time_ns()
+    kesto3 = loppuaika-alkuaika
+    tulos2 = tulos2.polku_labyrinttiin()
 
-    ui.tulos(tulos2, kesto1, kesto2)
+    ui.tulos(tulos2, kesto1, kesto2, kesto3)
 
 
 if __name__ == "__main__":

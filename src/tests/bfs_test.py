@@ -18,17 +18,17 @@ class TestBFS(unittest.TestCase):
         self.bfs2 = BFS(Labyrintti(lab, 4, 4, (0,0), (3,2)))
 
     def test_haku_ok(self):
-        etaisyys = self.bfs.syvyyshaku()
+        etaisyys = self.bfs.leveyshaku()
 
         self.assertEqual(etaisyys, 6)
 
     def test_reitti_seinaan(self):
-        etaisyys = self.bfs2.syvyyshaku()
+        etaisyys = self.bfs2.leveyshaku()
 
         self.assertEqual(etaisyys, -1)
 
     def test_reittia_ei_ole(self):
         olio = BFS(Labyrintti(lab2, 4, 4, (0,0), (3,3)))
-        etaisyys = olio.syvyyshaku()
+        etaisyys = olio.leveyshaku()
 
         self.assertEqual(etaisyys, -1)

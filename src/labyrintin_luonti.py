@@ -71,7 +71,6 @@ class LabyrintinLuonti():
                     ctr += 1
         return ctr
 
-
     def tulosta(self):
         """Metodi, joka tulostaa valmiin labyrintin selkeässä muodossa
 

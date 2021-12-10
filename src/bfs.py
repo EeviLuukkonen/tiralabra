@@ -11,7 +11,7 @@ class BFS:
         [0 for _ in range(self.labyrintti.leveys)] for _ in range(self.labyrintti.korkeus)]
 
 
-    def syvyyshaku(self):
+    def leveyshaku(self):
         """Metodi joka toteuttaa leveyshaun
 
         Returns:
@@ -24,7 +24,7 @@ class BFS:
         jono.append(self.labyrintti.alku)
         while len(jono) > 0:
             solmu = jono.popleft()
-            if solmu[0] == self.labyrintti.loppu[0] and solmu[1] == self.labyrintti.loppu[1]:
+            if self.onko_paatepiste(solmu):
                 return self.etaisyys[self.labyrintti.loppu[0]][self.labyrintti.loppu[1]]
             for i in range(4):
                 naapurix = solmu[1] + suuntax[i]
@@ -37,3 +37,16 @@ class BFS:
                         jono.append((naapuriy, naapurix))
                         self.etaisyys[naapuriy][naapurix] = (self.etaisyys[solmu[0]][solmu[1]])+1
         return -1
+
+    def onko_paatepiste(self, solmu):
+        """Metodi, joka tarkistaa onko käsiteltävä solmu päätepiste
+
+        Args:
+            solmu: käsiteltävä kohta labyrintissa
+
+        Returns:
+            True, jos piste on päätepiste, muuten False
+        """
+        if solmu[0] == self.labyrintti.loppu[0] and solmu[1] == self.labyrintti.loppu[1]:
+            return True
+        return False

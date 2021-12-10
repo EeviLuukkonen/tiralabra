@@ -46,8 +46,9 @@ def koordinaattien_valinta(labyrintti):
 
     return alku, loppu
 
-def tulos(polun_pituus, kesto1, kesto2):
+def tulos(polun_pituus, kesto1, kesto2, kesto3):
     print("\nTULOKSET:")
     print(f"\nLyhyimmän polun pituus on {polun_pituus}.")
-    print(f"Syvyyshaulla ratkaisun saaminen kesti {kesto1} nanosekuntia.")
-    print(f"Dead-end filling -algoritmilla ratkaisun saaminen kesti {kesto2} nanosekuntia.\n")
+    print(f"Ratkaistavan labyrintin generointiin kului satunnaistetulla syvyyshaulla {kesto1} nanosekuntia eli {kesto1/1000000000} sekuntia.")
+    print(f"Leveyshaulla ratkaisun saaminen kesti {kesto2} nanosekuntia eli {kesto2/1000000000} sekuntia")
+    print(f"Dead-end filling -algoritmilla ratkaisun saaminen kesti {kesto3} nanosekuntia eli {kesto3/1000000000} sekuntia.\n")

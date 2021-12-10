@@ -15,7 +15,6 @@ class DeadEndFilling:
                 for j in range(self.labyrintti.leveys):
                     if self.onko_dead_end(i, j):
                         change = True
-        return self.polku_labyrinttiin()
 
     def onko_dead_end(self, i, j):
         """Dead end fillingin apumetodi, joka kertoo onko solmu dead end
