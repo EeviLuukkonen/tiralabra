@@ -21,13 +21,13 @@ class TestDeadEndFilling(unittest.TestCase):
         self.def1.dead_end_filling()
         path = self.def1.polku_labyrinttiin()
 
-        self.assertEqual(path, 6)
+        self.assertEqual(path[0], 6)
 
     def test_ei_yhtaan_dead_endia(self):
         self.def1.dead_end_filling()
         path = self.def1.polku_labyrinttiin()
 
-        self.assertEqual(path, 6)
+        self.assertEqual(path[0], 6)
 
     def test_algoritmi_tunnistaa_reunat_umpikujiksi(self):
         self.def2.dead_end_filling()

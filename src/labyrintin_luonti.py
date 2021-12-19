@@ -81,7 +81,7 @@ class LabyrintinLuonti():
             print("".join(i))
         return lab
 
-    def alku_ja_loppu(self, koordinaattilista): # ["10","0"]
+    def alku_ja_loppu(self, koordinaattilista):
         """Metodi, joka testaa onko käyttäjän syöttämät koordinaatit kelvollisia
 
         Args:

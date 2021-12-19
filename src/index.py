@@ -31,7 +31,7 @@ def main():
     kesto3 = loppuaika-alkuaika
     tulos2 = tulos2.polku_labyrinttiin()
 
-    ui.tulos(tulos2, kesto1, kesto2, kesto3)
+    ui.tulokset(tulos2, kesto1, kesto2, kesto3)
 
 
 if __name__ == "__main__":

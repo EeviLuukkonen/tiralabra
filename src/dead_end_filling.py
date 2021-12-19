@@ -53,6 +53,9 @@ class DeadEndFilling:
 
     def polku_labyrinttiin(self):
         """Metodi, joka laskee polun pituuden
+
+        Returns:
+            Tuplena polun pituuden sekä ratkaistun labyrinttimatriisin
         """
         pituus = 0
         for i in range(self.labyrintti.korkeus):
@@ -60,5 +63,6 @@ class DeadEndFilling:
                 if self.labyrintti.labyrintti[i][j] == ".":
                     pituus += 1
                 elif self.labyrintti.labyrintti[i][j] == "alku/loppu":
+                    self.labyrintti.labyrintti[i][j] = "."
                     pituus +=1
-        return pituus -1
+        return pituus-1, self.labyrintti.labyrintti
