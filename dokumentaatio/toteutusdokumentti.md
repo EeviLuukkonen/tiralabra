@@ -30,13 +30,17 @@ Dead-end fillingin aikavaativuus on 2^n. Sen tilavaativuus on O(1), sillä se mu
 
 ## Suorituskyky- ja O-analyysivertailu
 
-Syvyyshaku on suorituskyvyltään parempi algoritmi kuin dead-end filling.
+Syvyyshaku on suorituskyvyltään parempi algoritmi kuin dead-end filling. Tämä johtunee siitä, että ohjelmassa syvyyshaku etsii vain polun pituuden, ei reittiä varsinaiseen labyrinttiin.
+
+Lisää suorituskykyvertailua testausdokumentissa.
 
 ## Työn mahdolliset puutteet ja parannusehdotukset
 
+Syvyyshaku etsii vain polun pituuden, ei piirrä polkua labyrinttiin. 
+
 Labyrinttien luomiseen olisin voinut käyttää algoritmia, joka mahdollistaisi suurempien labyrinttien luomisen. Suorituskykyvertailu olisi mielekkäämpää, jos ohjelmassa pystyisi selvittämään esimerkiksi 1000x1000 -kokoisen labyrintin reitin. Tällöin kuitenkin käyttöjärjestelmä olisi tullut toteuttaa jotenkin muuten kuin terminaalissa tai vaihtoehtoisesti jättää visuaalinen puoli ohjelmasta pois.
 
-Lisäksi ohjelman luomat labyrintit ovat "perfect maze" eli niissä on vain yksi polku. Syvyyshaulla voi löytää lyhyimmän polun labyrintista, joissa reittejä on useita. Dead-end filling taas jättää kaikki mahdolliset polut, joista lyhyin olisi täytynyt etsiä erikseen. Tällaiset labyrintit olisivat joka tapauksessa olleet mielenkiintoinen lisä ohjelmalle.
+Lisäksi ohjelman luomat labyrintit ovat "perfect maze" eli niissä on vain yksi polku. Syvyyshaulla voi löytää lyhyimmän polun pituuden labyrintista, joissa reittejä on useita. Dead-end filling taas jättää kaikki mahdolliset polut, joista lyhyin olisi täytynyt etsiä erikseen. Tällaiset labyrintit olisivat joka tapauksessa olleet mielenkiintoinen lisä ohjelmalle.
 
 ## Lähteet
 
