@@ -52,4 +52,4 @@ Pylint-arvosanan voi suorittaa komennolla
 poetry run invoke lint
 ```
 
-Pylint-score on 9.67.
+Pylint-score on 9.83.
